@@ -1,0 +1,1510 @@
+@import './typography.css';
+@import './reset.css';
+@import './generic.css';
+
+div.app:after {
+  clear: both;
+  content: '';
+  display: block;
+}
+
+header {
+  float: right;
+  width: 15%;
+}
+
+header:before {
+  background-color: #cbcbcc;
+  content: '';
+  display: block;
+  height: 100%;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 15%;
+  z-index: -1;
+}
+
+header h1 {
+  left: 10px;
+  position: absolute;
+  top: 10px;
+}
+
+header h1 a {
+  background: url(../image/brand/skyhub-800x238.png) no-repeat;
+  background-size: contain;
+  height: 52px;
+  display: block;
+  overflow: hidden;
+  text-indent: -9999px;
+  width: 175px;
+}
+
+header h1 span {
+  display: none;
+}
+
+header nav {
+  font-family: 'Inconsolata';
+  box-shadow: 0 10px 6px -6px rgba(0, 0, 0, 0.1);
+}
+
+header nav {
+  background-color: #e2e2e3;
+  position: relative;
+}
+
+header nav:hover {
+  margin-top: 0;
+}
+
+header nav:before,
+header nav:after {
+  content: '';
+  display: block;
+  position: absolute;
+}
+
+header nav:after {
+  background-color: #e2e2e3;
+  box-shadow: 0 10px 6px -6px rgba(0, 0, 0, 0.1);
+  color: #b2ada9;
+  content: '\e5d2';
+  cursor: pointer;
+  font-family: 'Material Icons';
+  font-size: 2rem;
+  height: 40px;
+  left: 50%;
+  line-height: 40px;
+  text-align: center;
+  top: 100%;
+  transform: translateX(-50%);
+  width: 40px;
+}
+
+header nav > ul:after {
+  clear: both;
+  content: '';
+  display: block;
+}
+
+header nav > ul > li {
+  float: left;
+  position: relative;
+  width: 50%;
+}
+
+header nav > ul > li > span,
+header nav > ul > li > a {
+  color: #b2ada9;
+  cursor: pointer;
+  display: block;
+  font-size: 0.9rem;
+  line-height: 0.9rem;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+header nav > ul > li:hover > span,
+header nav > ul > li:hover > a {
+  background-color: #fff;
+  color: #32b4e1;
+}
+
+header nav > ul > li > span:before,
+header nav > ul > li > a:before {
+  display: block;
+  font-family: 'Material Icons';
+  font-size: 2rem;
+  line-height: 2rem;
+}
+
+header nav > ul > li.search > span:before,
+header nav > ul > li.search > a:before {
+  content: '\e8b6';
+}
+
+header nav > ul > li.select > span:before,
+header nav > ul > li.select > a:before {
+  content: '\e8d9';
+}
+
+header nav > ul > li.sync > span:before,
+header nav > ul > li.sync > a:before {
+  content: '\e627';
+}
+
+header nav > ul > li.settings > span:before,
+header nav > ul > li.settings > a:before {
+  content: '\e8b8';
+}
+
+header nav > ul > li.reports > span:before,
+header nav > ul > li.reports > a:before {
+  content: '\e0c3';
+}
+
+header nav > ul > li.logout > span:before,
+header nav > ul > li.logout > a:before {
+  content: '\e8ac';
+}
+
+header nav > ul > li > ul {
+  background-color: #fff;
+  display: none;
+  font-size: 0.8rem;
+  padding: 10px 0;
+  position: absolute;
+  text-transform: uppercase;
+  width: 200%;
+  z-index: 1;
+}
+
+header nav > ul > li:nth-child(odd) > ul {
+  left: 0;
+}
+
+header nav > ul > li:nth-child(even) > ul {
+  right: 0;
+}
+
+header nav > ul > li:hover > ul {
+  box-shadow: 0 10px 6px -6px rgba(0, 0, 0, 0.1);
+  display: block;
+}
+
+header nav > ul > li > ul span {
+  color: #c6c6c8;
+  display: block;
+  margin: 0 10px;
+}
+
+header nav > ul > li > ul a {
+  color: #000;
+  display: block;
+  padding: 5px 10px;
+  text-decoration: none;
+}
+
+header nav > ul > li > ul a:before {
+  content: '\e5c8';
+  display: inline-block;
+  font-family: 'Material Icons';
+  margin-right: 5px;
+}
+
+header nav > ul > li > ul a:hover {
+  background-color: #e2e2e3;
+}
+
+header nav > ul > li > ul li.new a {
+  font-weight: bold;
+}
+
+header nav > ul > li > ul li.new a:before,
+header nav > ul > li > ul li.shipping a:before,
+header nav > ul > li > ul li.integration a:before,
+header nav > ul > li > ul li.profile a:before {
+  display: inline-block;
+  font-family: 'Material Icons';
+  margin-right: 5px;
+  position: relative;
+  top: 3px;
+}
+
+header nav > ul > li > ul li.new a:before {
+  content: '\e145';
+}
+
+header nav > ul > li > ul li.shipping a:before {
+  content: '\e558';
+}
+
+header nav > ul > li > ul li.integration a:before {
+  content: '\e87b';
+}
+
+header nav > ul > li > ul li.preferences a:before {
+  content: '\e869';
+}
+
+header nav > ul > li > ul li.profile a:before {
+  content: '\e7fd';
+}
+
+div.content {
+  float: left;
+  padding: 60px 20px 0 10px;
+  width: calc(85% - 30px);
+}
+
+section.timeline {
+  margin-top: 20px;
+  padding-left: 10px;
+  position: relative;
+}
+
+section.timeline h1 {
+  border-bottom: solid 1px #c6c6c8;
+  color: #c6c6c8;
+  font-family: 'Space Mono';
+  font-size: 2rem;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+section.timeline > nav {
+  font-family: 'Inconsolata';
+  font-size: 0.9rem;
+  line-height: 0.9rem;
+  position: absolute;
+  right: 0;
+  text-transform: uppercase;
+  top: 0;
+}
+
+section.timeline > nav a {
+  color: #000;
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+}
+
+section.timeline > nav ul:after {
+  clear: both;
+  content: '';
+  display: block;
+}
+
+section.timeline > nav > ul > li {
+  color: #c6c6c8;
+  float: left;
+  position: relative;
+  min-width: 150px;
+  text-align: center;
+}
+
+section.timeline > nav > ul > li > ul {
+  background-color: #fff;
+  left: 0;
+  position: absolute;
+  top: 100%;
+  min-width: 100%;
+  z-index: 1;
+}
+
+section.timeline > nav > ul > li:hover > ul {
+  box-shadow: 0 10px 6px -6px rgba(0, 0, 0, 0.1);
+  border: solid 1px #32b4e1;
+  margin: -1px;
+  padding-top: 34px;
+}
+
+section.timeline > nav > ul > li:not(:hover) > ul li:not(.active) {
+  display: none;
+}
+
+section.timeline > nav > ul > li > ul li.active {
+  left: 50%;
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  width: 100%;
+}
+
+section.timeline > nav > ul > li.order:not(:hover) > ul li.active {
+  min-width: 130px;
+}
+
+section.timeline > nav > ul > li > ul li.active a {
+  color: #32b4e1;
+  font-weight: bold;
+}
+
+section.timeline > nav > ul > li > ul li:not(.active) a:hover {
+  background-color: #e2e2e3;
+}
+
+section.timeline > nav > ul > li > ul li.active a:hover {
+  background-color: #32b4e1;
+  color: #fff;
+}
+
+section.timeline article {
+  clear: both;
+  margin-left: 180px;
+  padding: 25px 0;
+  position: relative;
+  transition: opacity 0.25s;
+}
+
+section.timeline:hover article {
+  opacity: 0.25;
+}
+
+section.timeline:hover article:hover {
+  opacity: 1;
+}
+
+section.timeline article:before,
+section.timeline article:after {
+  content: '';
+  display: block;
+  position: absolute;
+}
+
+section.timeline article:before {
+  background-color: #32b4e1;
+  height: 100%;
+  left: -90px;
+  width: 4px;
+}
+
+section.timeline article dt {
+  display: none;
+}
+
+section.timeline article dl.description {
+  color: #4c4d48;
+  font-family: 'neue-haas-grotesk-display';
+  font-size: 1.5rem;
+  position: relative;
+}
+
+section.timeline article dl.description:before,
+section.timeline article dl.description:after {
+  content: '';
+  display: block;
+  position: absolute;
+}
+
+section.timeline article dl.description:before {
+  background-color: #32b4e1;
+  height: 4px;
+  left: -70px;
+  top: 10px;
+  width: 45px;
+  z-index: -1;
+}
+
+section.timeline article dl.description:after {
+  background-color: #f5f5f5;
+  border: solid 3px #32b4e1;
+  border-radius: 50%;
+  height: 8px;
+  left: -30px;
+  top: 6px;
+  width: 8px;
+}
+
+section.timeline article dl.description dd:before {
+  border-right: solid 1px #4c4d48;
+  display: inline-block;
+  font-family: 'Material Icons';
+  margin-right: 10px;
+  padding-right: 10px;
+}
+
+section.timeline article.sync.success dl.description dd:before {
+  content: '\e627\e2bf';
+}
+
+section.timeline article.product dl.description dd:before {
+  content: '\e54e\e8c2\e2bf';
+}
+
+section.timeline article.product.message dl.description dd:before {
+  content: '\e54e\e87c\e0c9';
+}
+
+section.timeline article.products dl.description dd:before {
+  content: '\e8cb\e8c2\e626';
+}
+
+section.timeline article.order dl.description dd:before {
+  content: '\e547\e558';
+}
+
+section.timeline article.order.error dl.description dd:before {
+  content: '\e547\e227\e626';
+}
+
+section.timeline article dl.description span {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+section.timeline article dl.description a {
+  color: #32b4e1;
+  position: relative;
+  text-decoration: none;
+}
+
+section.timeline article dl.description a.active {
+  background-color: #32b4e1;
+  color: #fff;
+  padding: 5px;
+  position: relative;
+  transition: background-color 0.5s, color 0.5s, padding 0.5s;
+  z-index: 2;
+}
+
+section.timeline article dl.description a:after {
+  background-color: #32b4e1;
+  bottom: 0;
+  content: '';
+  display: block;
+  height: 2px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+
+section.timeline article dl.description span.status {
+  border: solid 1px transparent;
+  display: inline-block;
+  font-size: 1.25rem;
+  padding: 5px 10px;
+}
+
+section.timeline article dl.description em.help {
+  border-bottom: dotted 1px #4c4d48;
+  font-style: italic;
+}
+
+section.timeline article dl.description em.attribute {
+  background-color: #f7f7f9;
+  border: solid 1px #e1e1e8;
+  color: #c25;
+  display: inline-block;
+  font-family: 'Inconsolata';
+  font-size: 1rem;
+  font-style: normal;
+  line-height: 1rem;
+  padding: 5px 10px;
+}
+
+section.timeline article dl.description span.status.success,
+section.timeline article dl.description span.status.error {
+  padding: 5px 35px 5px 15px;
+  position: relative;
+}
+
+section.timeline article dl.description span.status:after {
+  display: block;
+  font-family: 'Material Icons';
+  font-size: 1.5rem;
+  position: absolute;
+  right: 10px;
+}
+
+section.timeline article dl.description span.status.success {
+  background-color: #ccdfcc;
+  border-color: #036300;
+  color: #036300;
+}
+
+section.timeline article dl.description span.status.success:after {
+  content: '\e876';
+  top: 2px;
+}
+
+section.timeline article dl.description span.status.error {
+  background-color: #ebd2ce;
+  border-color: #9f1e0b;
+  color: #9f1e0b;
+}
+
+section.timeline article dl.description span.status.error:after {
+  content: '\e14c';
+  top: 4px;
+}
+
+section.timeline article dl.description span.status.update {
+  background-color: #fbebc9;
+  border-color: #000;
+  color: #000;
+  font-family: 'Inconsolata';
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+section.timeline article.product.message dl.details {
+  background-color: #fff;
+  border: solid 1px #c6c6c8;
+  color: #4c4d48;
+  display: block;
+  font-family: 'Inconsolata';
+  font-size: 1.2rem;
+  margin-right: 20px;
+  padding: 20px 30px 20px 50px;
+  position: relative;
+}
+
+section.timeline article.product.message dl.details:before {
+  background-color: #c6c6c8;
+  color: #fff;
+  content: '\e244';
+  display: block;
+  font-family: 'Material Icons';
+  font-size: 2rem;
+  height: 100%;
+  left: 0;
+  line-height: 2rem;
+  position: absolute;
+  top: 0;
+}
+
+section.timeline article.sync dl.details {
+  background-color: #000;
+  border: dotted 1px #fff;
+  color: #fff;
+  font-family: 'Source Code Pro';
+  font-size: 1rem;
+  margin: 10px 20px 0 0;
+  padding: 10px;
+}
+
+section.timeline article.sync dl.details li.success {
+  color: #00ff00;
+}
+
+section.timeline article dl.date,
+section.timeline article dl.time {
+  position: absolute;
+}
+
+section.timeline article dl.date {
+  left: -170px;
+  padding: 10px 10px 25px 0;
+  width: 40px;
+  top: 10px;
+}
+
+section.timeline article dl.date:before,
+section.timeline article dl.date:after {
+  content: '';
+  display: block;
+  content: '\e2bd';
+  font-family: 'Material Icons';
+  position: absolute;
+}
+
+section.timeline article dl.date:before {
+  color: #f5f5f5;
+  font-size: 3.5rem;
+  right: -59px;
+  top: -5px;
+}
+
+section.timeline article dl.date:after {
+  color: #32b4e1;
+  font-size: 3rem;
+  right: -55px;
+  top: 0;
+}
+
+section.timeline article dl.date span {
+  color: #c6c6c8;
+  display: block;
+  font-family: 'neue-haas-grotesk-display';
+  text-transform: uppercase;
+}
+
+section.timeline article dl.date span.separator,
+section.timeline article dl.date span.year {
+  display: none;
+}
+
+section.timeline article dl.date span.day {
+  font-size: 2.5rem;
+  line-height: 2rem;
+}
+
+section.timeline article dl.date span.month {
+  font-size: 1.25rem;
+  line-height: 1rem;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+section.timeline article dl.time {
+  left: -170px;
+  top: 70px;
+}
+
+section.timeline article dl.time span {
+  color: #c6c6c8;
+  display: block;
+  float: left;
+  font-family: 'Inconsolata';
+  font-size: 0.6rem;
+}
+
+section.timeline article dl.time:after {
+  clear: both;
+  content: '';
+  display: block;
+}
+
+section.timeline article dl.actions {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  position: relative;
+  text-align: right;
+  transition: max-height 0.5s, opacity 0.5s;
+  transition-delay: 0.5s;
+}
+
+section.timeline article:hover dl.actions {
+  max-height: 100px;
+  opacity: 1;
+  transition: max-height 1s, opacity 1s;
+  transition-delay: 0.25s;
+}
+
+section.timeline article dl.actions dd {
+  display: inline-block;
+}
+
+section.timeline article dl.actions dd ul {
+  padding: 0 20px;
+  margin-top: 20px;
+}
+
+section.timeline article dl.actions dd ul:after {
+  clear: both;
+  content: '';
+  display: block;
+}
+
+section.timeline article dl.actions dd li,
+section.timeline article dl.actions dd li:before {
+  float: left;
+}
+
+section.timeline article dl.actions dd li:not(:first-child):before {
+  content: 'ou';
+  display: block;
+  font-family: 'Inconsolata';
+  margin: 8px 10px 0 10px;
+  text-transform: uppercase;
+}
+
+section.timeline article dl.actions dd a {
+  color: #b2ada9;
+  display: inline-block;
+  font-family: 'Inconsolata';
+  font-size: 0.9rem;
+  font-weight: bold;
+  line-height: 0.9rem;
+  padding: 10px;
+  text-transform: uppercase;
+}
+
+section.timeline article dl.actions dd li:not(.confirmable) a {
+  box-shadow: 0 10px 6px -6px rgba(0, 0, 0, 0.1);
+}
+
+section.timeline article dl.actions dd li.confirmable a {
+  color: #531017;
+}
+
+section.timeline article dl.actions dd a:hover,
+section.timeline article dl.actions dd li:not(.confirmable) a,
+section.timeline article dl.actions dd li.confirmable a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+section.timeline article dl.actions dd li:not(.confirmable) a,
+section.timeline article dl.actions dd a:hover {
+  background-color: #32b4e1;
+}
+
+section.timeline article dl.actions dd li.confirmable a:hover {
+  background-color: #531017;
+  box-shadow: 0 10px 6px -6px rgba(0, 0, 0, 0.1);
+}
+
+section.search {
+  display: none;
+  left: 30px;
+  position: absolute;
+  top: 30px;
+  width: calc(100% - 60px);
+  z-index: 1;
+}
+
+section.search.active {
+  display: block;
+}
+
+section.search:before,
+section.search:after {
+  content: '';
+  display: block;
+  height: 100%;
+  top: 0;
+  width: 100%;
+}
+
+section.search:before {
+  background-color: rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  left: 0;
+  position: fixed;
+  z-index: -2;
+}
+
+section.search:after {
+  background-color: #f5f5f5;
+  border: solid 1px #c6c6c8;
+  position: absolute;
+  z-index: -1;
+}
+
+section.search form {
+  display: block;
+  position: relative;
+  text-align: center;
+}
+
+section.search legend {
+  display: none;
+}
+
+section.search fieldset {
+  display: inline-block;
+  padding-top: 60px;
+}
+
+section.search fieldset:after {
+  background-color: #000;
+  content: '';
+  display: block;
+  height: 1px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+
+section.search fieldset dl.keywords {
+  left: 0;
+  position: absolute;
+  top: 20px;
+  width: 100%;
+}
+
+section.search fieldset dl.keywords dt {
+  display: none;
+}
+
+section.search fieldset dl.keywords dd {
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  width: 60%;
+}
+
+section.search fieldset dl.keywords dd:after {
+  color: #32b4e1;
+  content: '\e8b6';
+  display: block;
+  font-family: 'Material Icons';
+  font-size: 2rem;
+  line-height: 2rem;
+  right: 5px;
+  position: absolute;
+  top: 10px;
+}
+
+section.search fieldset dl.keywords input {
+  background-color: #fff;
+  border: solid 1px #c6c6c8;
+  box-shadow: 0 5px 6px -6px rgba(0, 0, 0, 0.1);
+  color: #4c4d48;
+  display: block;
+  font-family: 'neue-haas-grotesk-display';
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  outline: 0;
+  padding: 10px 20px;
+  transition: border-color 0.5s, box-shadow 0.5s;
+  width: calc(100% - 40px);
+}
+
+section.search fieldset dl.keywords input::-webkit-input-placeholder {
+  color: #c6c6c8;
+  font-size: 1.25rem;
+}
+
+section.search fieldset dl.keywords input:-moz-placeholder {
+  color: #c6c6c8;
+  font-size: 1.25rem;
+}
+
+section.search fieldset dl.keywords input::-moz-placeholder {
+  color: #c6c6c8;
+  font-size: 1.25rem;
+}
+
+section.search fieldset dl.keywords input:-ms-input-placeholder {
+  color: #c6c6c8;
+  font-size: 1.25rem;
+}
+
+section.search fieldset dl.keywords input:focus {
+  border-color: #4c4d48;
+  box-shadow: 0 10px 6px -6px rgba(0, 0, 0, 0.1);
+}
+
+section.search fieldset dl.context {
+  display: inline-block;
+  margin: 25px;
+}
+
+section.search fieldset dl.context dt {
+  display: none;
+}
+
+section.search fieldset dl.context div.field {
+  display: block;
+  text-align: center;
+}
+
+section.search fieldset dl.context div.option {
+  display: inline-block;
+}
+
+section.search fieldset dl.context input {
+  display: none;
+}
+
+section.search fieldset dl.context label {
+  color: #b2ada9;
+  display: block;
+  font-family: 'Inconsolata';
+  font-size: 1rem;
+  line-height: 1rem;
+  cursor: pointer;
+  padding: 0 15px 10px 15px;
+  position: relative;
+  transition: color 0.5s;
+}
+
+section.search fieldset dl.context label:hover {
+  color: #4c4d48;
+}
+
+section.search fieldset dl.context label:after {
+  background-color: #32b4e1;
+  bottom: 0;
+  content: '';
+  display: block;
+  height: 0;
+  left: 0;
+  position: absolute;
+  transition: height 0.215s ease-in;
+  width: 100%;
+}
+
+section.search fieldset dl.context input[type="radio"]:checked + label {
+  color: #32b4e1;
+}
+
+section.search fieldset dl.context input[type="radio"]:checked + label:after {
+  height: 3px;
+}
+
+section.search fieldset dl.tools {
+  color: #777;
+  display: inline-block;
+  font-family: 'Roboto';
+  font-size: 0.9rem;
+  line-height: 0.9rem;
+}
+
+section.search fieldset dl.tools > dd {
+  background-color: #f5f5f5;
+  border-left: solid 1px #c6c6c8;
+  border-right: solid 1px #c6c6c8;
+  border-top: solid 1px #c6c6c8;
+  left: 0;
+  margin-top: 11px;
+  position: absolute;
+  text-align: left;
+  width: 100%;
+  z-index: 1;
+}
+
+section.search fieldset dl.tools > dd > dl {
+  display: block;
+  padding: 10px 0;
+  text-align: center;
+  width: 100%;
+}
+
+section.search fieldset dl.tools > dd > dl > dt {
+  display: none;
+}
+
+section.search fieldset dl.tools > dd > dl dl {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  width: 13%;
+}
+
+section.search fieldset dl.tools > dd > dl dl:not(:first-child) {
+  margin-left: 10px;
+}
+
+section.search fieldset dl.tools > dd > dl dl dt {
+  display: none;
+}
+
+section.search fieldset dl.tools > dd > dl dl div.field {
+  text-align: left;
+}
+
+section.search fieldset dl.tools > dd > dl dl div.field:not(:hover) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+section.search fieldset dl.tools > dd > dl dl div.field:hover:before {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.16);
+  content: '';
+  display: block;
+  height: calc(100% + 20px);
+  left: -30px;
+  position: absolute;
+  top: -10px;
+  width: calc(100% + 50px);
+  z-index: -1;
+}
+
+section.search fieldset dl.tools > dd > dl dl div.field:hover {
+  background-color: #fff;
+  left: 0;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+
+section.search fieldset dl.tools > dd > dl dl div.field:hover div.option.custom {
+  padding-top: 10px;
+  position: relative;
+}
+
+section.search fieldset dl.tools > dd > dl dl div.field:hover div.option.custom:before {
+  background-color: #c6c6c8;
+  content: '';
+  display: block;
+  height: 1px;
+  left: -30px;
+  position: absolute;
+  top: 0;
+  width: calc(100% + 50px);
+}
+
+section.search fieldset dl.tools > dd > dl dl div.field:not(:hover) div.option {
+  display: inline-block;
+}
+
+section.search fieldset dl.tools > dd > dl dl div.field input,
+section.search fieldset dl.tools > dd > dl dl div.field:not(:hover) input:not(:checked) + label {
+  display: none;
+}
+
+section.search fieldset dl.tools > dd > dl dl div.field label {
+  cursor: pointer;
+  display: block;
+  padding: 5px 0;
+  position: relative;
+  white-space: nowrap;
+}
+
+section.search fieldset dl.tools > dd > dl dl div.field:hover label:after {
+  content: '';
+  background-color: #fff;
+  display: block;
+  height: 100%;
+  left: -30px;
+  position: absolute;
+  top: 0;
+  width: calc(100% + 50px);
+  z-index: -1;
+}
+
+section.search fieldset dl.tools > dd > dl dl div.field label:hover:after {
+  background-color: #f5f5f5;
+}
+
+section.search fieldset dl.tools > dd > dl dl div.field:not(:hover) input:checked + label {
+  display: inline-block;
+}
+
+section.search fieldset dl.tools > dd > dl dl div.field:hover input:checked + label:before {
+  content: '\e876';
+  display: block;
+  font-family: 'Material Icons';
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+  right: calc(100% + 3px);
+  position: absolute;
+  top: 1px;
+}
+
+/*
+section.search fieldset dl.tools > dd > dl dl:nth-child(1),
+section.search fieldset dl.tools > dd > dl dl:nth-child(4) {
+  display: none;
+}
+
+section.search fieldset dl.tools > dd > dl dl div.field.radio {
+  background-color: #fff;
+  border: solid 1px #d6d6d6;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.16);
+  left: 0;
+  position: absolute;
+  top: 100%;
+}
+
+section.search fieldset dl.tools > dd > dl dl div.field.radio:hover {
+  padding-top: 20px;
+  z-index: 1;
+}
+
+section.search fieldset dl.tools > dd > dl dl div.field.radio input {
+  display: none;
+}
+
+section.search fieldset dl.tools > dd > dl dl div.field.radio label {
+  cursor: pointer;
+  display: none;
+  min-width: 100%;
+  padding: 2.5px 20px 2.5px 40px;
+  white-space: nowrap;
+}
+
+section.search fieldset dl.tools > dd > dl dl div.field.radio:hover label {
+
+}
+
+section.search fieldset dl.tools > dd > dl dl div.field.radio:hover label,
+section.search fieldset dl.tools > dd > dl dl div.field.radio input:checked + label {
+  display: block;
+}
+
+section.search fieldset dl.tools > dd > dl dl div.field.radio input:checked + label {
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 50%;
+}
+
+section.search fieldset dl.tools > dd > dl dl div.field.radio:hover input:checked + label {
+  background-color: rgba(254, 221, 77, 0.5);
+}*/
+
+section.search fieldset div.controls input[type="submit"] {
+  background: none;
+  border: 0;
+  cursor: pointer;
+  font-size: 0;
+  height: 30px;
+  outline: 0;
+  position: absolute;
+  right: calc(20% + 10px);
+  top: 10px;
+  width: 25px;
+}
+
+section.search article.results {
+  display: none;
+}
+
+section.details {
+  left: 0;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+
+section.details.active:before {
+  background-color: rgba(0, 0, 0, 0.4);
+  content: '';
+  cursor: pointer;
+  display: block;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+section.details article {
+  display: none;
+  position: absolute;
+}
+
+section.details.active article {
+  display: block;
+}
+
+section.details article.product {
+  background-color: #fff;
+  border: solid 1px #fff;
+  box-shadow: 0 10px 6px -6px rgba(0, 0, 0, 0.1);
+  left: 805px;
+  padding: 95px 10px 10px 10px;
+  top: 100px;
+  width: 293px;
+  z-index: 1;
+}
+
+section.details article.product:before,
+section.details article.product:after {
+  content: '';
+  display: block;
+  position: absolute;
+}
+
+
+section.details article.product:before {
+  background: url(../image/trash/call-of-duty.jpg) center center;
+  background-size: cover;
+  height: 85px;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+section.details article.product:after {
+  border-style: solid;
+  border-width: 20px 20px 20px 0;
+  border-color: transparent #fff transparent transparent;
+  height: 0;
+  right: 100%;
+  top: 85px;
+  width: 0;
+}
+
+section.details article.product h2 {
+  font-family: 'neue-haas-grotesk-display';
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+}
+
+section.details article.product p.removed {
+  background-color: #ffeaa8;
+  color: #4c4d48;
+  font-family: 'Space Mono';
+  font-size: 0.7rem;
+  line-height: 0.7rem;
+  margin-top: 10px;
+  padding: 5px 30px 5px 5px;
+  position: relative;
+}
+
+section.details article.product p.removed:before {
+  content: '\e92b';
+  display: block;
+  font-family: 'Material Icons';
+  font-size: 1rem;
+  line-height: 1rem;
+  right: 2px;
+  position: absolute;
+  top: 2px;
+}
+
+section.details article.product dl.sku {
+  color: #c6c6c8;
+  font-family: 'neue-haas-grotesk-display';
+  margin-top: 5px;
+}
+
+section.details article.product dl.sku dt {
+  display: none;
+}
+
+section.details article.product dl.category {
+  margin-top: 10px;
+}
+
+section.details article.product dl.category dt {
+  display: none;
+}
+
+section.details article.product dl.category li {
+  display: inline;
+}
+
+section.details article.product dl.category li:not(:first-child):before {
+  color: #cbcbcc;
+  content: '\e8e4';
+  display: inline-block;
+  font-family: 'Material Icons';
+  font-size: 1rem;
+  margin-right: 5px;
+  position: relative;
+  top: 2.5px;
+}
+
+section.details article.product dl.category li a {
+  color: #32b4e1;
+  font-family: 'neue-haas-grotesk-display';
+  font-size: 1rem;
+  line-height: 1rem;
+  text-decoration: none;
+}
+
+section.details article.product dl.price:not(.promotional),
+section.details article.product dl.price.promotional {
+  margin: 20px 0;
+  padding: 10px;
+  position: relative;
+  width: calc(50% - 20px);
+}
+
+section.details article.product dl.price:not(.promotional) dt,
+section.details article.product dl.price.promotional dt {
+  font-family: 'Inconsolata';
+  font-size: 0.8rem;
+  line-height: 0.8rem;
+  bottom: 100%;
+  position: absolute;
+  text-transform: uppercase;
+}
+
+section.details article.product dl.price:not(.promotional) dt {
+  right: 10px;
+}
+
+section.details article.product dl.price.promotional dt {
+  left: 10px;
+}
+
+section.details article.product dl.price:not(.promotional) {
+  background-color: #cbcbcc;
+  float: left;
+  text-align: right;
+}
+
+section.details article.product dl.price.promotional {
+  background-color: #f5f5f5;
+  float: right;
+  text-align: left;
+}
+
+section.details article.product dl.price:not(.promotional) dd,
+section.details article.product dl.price.promotional dd {
+  font-size: 1rem;
+  line-height: 1rem;
+}
+
+section.details article.product dl.price:not(.promotional) dd {
+  text-decoration: line-through;
+}
+
+section.details article.product dl.price.promotional dd {
+  font-weight: bold;
+}
+
+section.details article.product dl.stock {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: solid 1px #fff;
+  box-shadow: 0 10px 6px -6px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+section.details article.product dl.stock dt {
+  display: none;
+}
+
+section.details article.product dl.stock dd {
+  padding: 2.5px;
+}
+
+section.details article.product dl.stock dd span {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+section.details article.product dl.stock dd span:first-child {
+  font-family: 'neue-haas-grotesk-display';
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+}
+
+section.details article.product dl.stock dd span:last-child {
+  font-family: 'Inconsolata';
+  font-size: 0.6rem;
+  line-height: 0.6rem;
+  text-transform: uppercase;
+}
+
+section.details article.product fieldset {
+  border: solid 1px #cbcbcc;
+  clear: both;
+  padding: 15px 10px 10px 10px;
+  position: relative;
+}
+
+section.details article.product fieldset legend {
+  background-color: #fff;
+  color: #c6c6c8;
+  display: block;
+  font-family: 'Inconsolata';
+  font-size: 1rem;
+  left: 50%;
+  line-height: 1rem;
+  padding: 0 10px;
+  position: absolute;
+  text-transform: uppercase;
+  top: -10px;
+  transform: translateX(-50%);
+}
+
+section.details article.product div.field {
+  margin-top: 5px;
+}
+
+section.details article.product fieldset legend + div.field {
+  margin-top: 0;
+}
+
+section.details article.product div.field input {
+  display: none;
+}
+
+section.details article.product div.field label {
+  cursor: pointer;
+  font-family: 'neue-haas-grotesk-display';
+  font-size: 1rem;
+  display: block;
+  padding: 5px 0;
+  position: relative;
+}
+
+section.details article.product div.field label span {
+  background-color: #f5f5f5;
+  font-size: 0;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 135px;
+}
+
+section.details article.product div.field label span:before {
+  background-color: #9f1e0b;
+  color: #fff;
+  content: 'Desconectado';
+  display: block;
+  font-family: 'Inconsolata';
+  font-size: 0.6rem;
+  height: calc(100% - 10px);
+  left: 5px;
+  line-height: 1.3rem;
+  position: absolute;
+  top: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: background-color 0.25s, left 0.25s;
+  width: 60%;
+}
+
+section.details article.product div.field input:checked + label span:before {
+  background-color: #036300;
+  content: 'Conectado';
+  left: calc(40% - 5px);
+}
+
+section.details article.product div.field label a {
+  color: #32b4e1;
+  display: block;
+  text-decoration: none;
+  width: calc(100% - 135px);
+}
+
+section.details article.product dl.actions {
+  margin-top: 10px;
+  position: relative;
+  text-align: right;
+}
+
+section.details article.product dl.actions dt {
+  display: none;
+}
+
+section.details article.product dl.actions dd {
+  display: inline-block;
+}
+
+section.details article.product dl.actions dd ul:after {
+  clear: both;
+  content: '';
+  display: block;
+}
+
+section.details article.product dl.actions dd li,
+section.details article.product dl.actions dd li:before {
+  float: left;
+}
+
+section.details article.product dl.actions dd li:not(:first-child):before {
+  content: 'ou';
+  display: block;
+  font-family: 'Inconsolata';
+  margin: 8px 10px 0 10px;
+  text-transform: uppercase;
+}
+
+section.details article.product dl.actions dd a {
+  color: #b2ada9;
+  display: inline-block;
+  font-family: 'Inconsolata';
+  font-size: 0.9rem;
+  font-weight: bold;
+  line-height: 0.9rem;
+  padding: 10px;
+  text-transform: uppercase;
+}
+
+section.details article.product dl.actions dd li:not(.confirmable) a {
+  box-shadow: 0 10px 6px -6px rgba(0, 0, 0, 0.1);
+}
+
+section.details article.product dl.actions dd li.confirmable a {
+  color: #531017;
+}
+
+section.details article.product dl.actions dd a:hover,
+section.details article.product dl.actions dd li:not(.confirmable) a,
+section.details article.product dl.actions dd li.confirmable a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+section.details article.product dl.actions dd li:not(.confirmable) a,
+section.details article.product dl.actions dd a:hover {
+  background-color: #32b4e1;
+}
+
+section.details article.product dl.actions dd li.confirmable a:hover {
+  background-color: #531017;
+  box-shadow: 0 10px 6px -6px rgba(0, 0, 0, 0.1);
+}
